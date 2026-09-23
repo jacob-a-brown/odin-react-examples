@@ -5,9 +5,11 @@ const COLORS = ['pink', 'green', 'blue', 'yellow', 'purple'];
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
+  const [numChanges, setNumChanges] = useState(0);
 
   const onButtonClick = (color) => () => {
     setBackgroundColor(color);
+    setNumChanges(numChanges + 1);
   };
 
   return (
@@ -17,6 +19,8 @@ function App() {
         backgroundColor,
       }}
     >
+      <h2>There have been {numChanges} changes to the background color.</h2>
+      
       {COLORS.map((color) => (
         <button
           type="button"

@@ -12,6 +12,7 @@
   width: 100vw;
   height: 100vh;
   transition: all 0.1s ease-in;
+  flex-direction: column;
 }
 
 .App button {
